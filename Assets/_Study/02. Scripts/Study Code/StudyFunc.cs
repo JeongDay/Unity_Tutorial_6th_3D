@@ -35,7 +35,7 @@ public class StudyFunc : MonoBehaviour
 
         lookAtPlayer = CompareAngle;
 
-        ExternalClass.atkDelegate += BackAttack;
+        // ExternalClass.atkDelegate += BackAttack;
     }
 
     // public int AddMethod(int a, int b)

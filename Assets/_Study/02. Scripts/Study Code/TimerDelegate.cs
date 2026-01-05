@@ -1,17 +1,15 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class TimerDelegate : MonoBehaviour
 {
-    public delegate void TimerStart();
-    public static event TimerStart onTimerStart; // 타이머 시작 델리게이트
+    public static event Action onTimerStart; // 타이머 시작 델리게이트
 
-    public delegate void TimerStop();
-    public static event TimerStop onTimerStop; // 타이머 멈춤 델리게이트
+    public static event Action onTimerStop; // 타이머 멈춤 델리게이트
     
-    public delegate void TimerEnd();
-    public static event TimerEnd onTimerEnd; // 타이머 종료 델리게이트
+    public static event Action onTimerEnd; // 타이머 종료 델리게이트
 
     public KeyCode keyCode = KeyCode.Space; // 타이머 멈추는 키
 
