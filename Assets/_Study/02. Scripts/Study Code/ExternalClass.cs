@@ -5,11 +5,8 @@ public class ExternalClass : MonoBehaviour
 {
     void Start()
     {
-        StudyUnityAction.buttonAction += MethodB;
-    }
-    
-    public void MethodB()
-    {
-        Debug.Log("Method B");
+        BasicClass.Instance.LevelUp();
+
+        BasicClass.Instance.level = 10;
     }
 }
