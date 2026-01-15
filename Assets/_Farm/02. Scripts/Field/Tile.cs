@@ -12,7 +12,6 @@ public class Tile : MonoBehaviour
     private bool isCreate = false;
 
     #region 작물 심기
-
     public void CreateCrop(GameObject cropPrefab) // 타일의 자식으로 작물 생성 기능
     {
         if (isCreate)
@@ -35,7 +34,6 @@ public class Tile : MonoBehaviour
     #endregion
 
     #region 작물 수확하기
-
     public void HarvestCrop()
     {
         if (isCreate)
