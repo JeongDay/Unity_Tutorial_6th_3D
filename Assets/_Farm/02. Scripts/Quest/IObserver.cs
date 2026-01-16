@@ -2,5 +2,9 @@ using UnityEngine;
 
 public interface IObserver
 {
-    void Notify();
+    string QuestName { get; }
+    int CurrentCount { get; }
+    bool IsCompleted { get; }
+    
+    void Notify(string questName);
 }
