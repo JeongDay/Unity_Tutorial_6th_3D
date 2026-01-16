@@ -1,7 +1,7 @@
 using Farm;
 using UnityEngine;
 
-public class SpawnManager : MonoBehaviour
+public class GameManager : SingletonCore<GameManager>
 {
     [SerializeField] private GameObject[] characterPrefabs;
     [SerializeField] private Transform spawnPoint;
