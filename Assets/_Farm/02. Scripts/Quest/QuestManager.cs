@@ -8,6 +8,23 @@ public class QuestManager : SingletonCore<QuestManager>, ISubject
 
     [SerializeField] private Button[] questButtons;
     [SerializeField] private QuestData[] datas;
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        for (int i = 0; i < questButtons.Length; i++)
+        {
+            int j = i;
+            questButtons[i].onClick.AddListener(() => SetButton(j));
+        }
+    }
+
+    private void SetButton(int index)
+    {
+        Quest quest = new Quest(datas[index]);
+        questButtons[index].gameObject.SetActive(false);
+    }
     
     public void AddObserver(IObserver observer)
     {
