@@ -71,6 +71,9 @@ public class AnimalArea : MonoBehaviour, ITriggerEvent
 
     private void SetRandomPosition()
     {
+        if (!Flag.IsHasFlag)
+            return;
+            
         float randomX = Random.Range(coll.bounds.min.x, coll.bounds.max.x);
         float randomZ = Random.Range(coll.bounds.min.z, coll.bounds.max.z);
 
@@ -84,5 +87,7 @@ public class AnimalArea : MonoBehaviour, ITriggerEvent
         flag.transform.SetParent(transform);
         flag.transform.position = pos;
         flag.SetActive(isActive);
+
+        Flag.IsHasFlag = false;
     }
 }

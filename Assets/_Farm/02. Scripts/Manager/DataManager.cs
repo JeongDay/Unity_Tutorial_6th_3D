@@ -17,5 +17,8 @@ namespace Farm
                 selectCharacterIndex = value;
             }
         }
+
+        public GameObject Player { get; set; }
+        public string UserID { get; set; }
     }
 }
