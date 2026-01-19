@@ -5,11 +5,14 @@ public class GameManager : SingletonCore<GameManager>
 {
     [SerializeField] private GameObject[] characterPrefabs;
     [SerializeField] private Transform spawnPoint;
-    
-    void Start()
-    {
-        int index = DataManager.Instance.SelectCharacterIndex;
 
-        Instantiate(characterPrefabs[index], spawnPoint.position, Quaternion.identity);
+    protected override void Awake()
+    {
+        base.Awake();
+
+        int index = DataManager.Instance.SelectCharacterIndex;
+        GameObject character = Instantiate(characterPrefabs[index], spawnPoint.position, Quaternion.identity);
+
+        CameraManager.onSetProperty?.Invoke(character.transform);
     }
 }
