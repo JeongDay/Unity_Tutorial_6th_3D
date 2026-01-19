@@ -13,6 +13,11 @@ public class GameManager : SingletonCore<GameManager>
         int index = DataManager.Instance.SelectCharacterIndex;
         GameObject character = Instantiate(characterPrefabs[index], spawnPoint.position, Quaternion.identity);
 
-        CameraManager.onSetProperty?.Invoke(character.transform);
+        DataManager.Instance.Player = character;
+    }
+
+    void Start()
+    {
+        CameraManager.onSetProperty?.Invoke(DataManager.Instance.Player.transform);
     }
 }
