@@ -5,21 +5,20 @@ public class StudyThread : MonoBehaviour
 {
     void Start()
     {
-        Thread subThread = new Thread(MethodA);
-        subThread.IsBackground = true; // 유니티를
+        Thread t = new Thread(SubThread);
+        t.IsBackground = true;
         
-        subThread.Start();
-
-        subThread.Join(); // Thread가 완료될 때까지 대기 -> 동기
-
+        t.Start();
+        
+        t.Join();
         Debug.Log("Main Thread 종료");
     }
-
-    private void MethodA()
+    
+    private void SubThread()
     {
         Debug.Log("Sub Thread 실행");
-        Thread.Sleep(5000); // 5초 멈춤
         
-        Debug.Log("Sub Thread 완료");
+        Thread.Sleep(5000); // 5초
+        Debug.Log("Sub Thread 종료");
     }
 }

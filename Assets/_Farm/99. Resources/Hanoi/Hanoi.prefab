@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7095816115605100123}
   - component: {fileID: 5884359482251327087}
   - component: {fileID: 1667403477805154961}
+  - component: {fileID: 5382558724461470175}
   m_Layer: 0
   m_Name: Stick Left
   m_TagString: Untagged
@@ -133,6 +134,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 2.5, z: 5}
   m_Center: {x: 0.000000059604645, y: 0.5, z: -0.00000008940697}
+--- !u!114 &5382558724461470175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426082578074764620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5430f410950743efa93011e4073bd114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stickType: 0
+  hanoiTower: {fileID: 8249093699677418769}
 --- !u!1 &2656467295267872711
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,6 +188,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1455711612076343759}
+  - component: {fileID: 6397177587540156075}
+  - component: {fileID: 8249093699677418769}
   m_Layer: 0
   m_Name: Hanoi
   m_TagString: Untagged
@@ -188,7 +205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3885440145795720278}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 69.12, y: 0.851, z: 36.379}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -196,6 +213,50 @@ Transform:
   - {fileID: 7499549826426487457}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6397177587540156075
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3885440145795720278}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.42, z: 1.5}
+  m_Center: {x: 0, y: 0, z: -0.35}
+--- !u!114 &8249093699677418769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3885440145795720278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ae6d1e3c1bb20a4eb2b3fdd5ce17a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hanoiLevel: 5
+  ringPrefabs:
+  - {fileID: 8880915920315640289, guid: 13e84355e7fa0cd4cbc812498b272f39, type: 3}
+  - {fileID: 5135802789852233993, guid: 0d57c95828cec0c488310491c0514135, type: 3}
+  - {fileID: 2580209783596391938, guid: 153e13617b2606c43a75c2ee13972a98, type: 3}
+  - {fileID: 2593453190939961115, guid: c25d34a6b8f4ad34c89ca62856856fa0, type: 3}
+  - {fileID: 6292892395920479170, guid: 10e7f6ce9a332754b972e3dc0f22c759, type: 3}
+  sticks:
+  - {fileID: 5382558724461470175}
+  - {fileID: 8444594726856117859}
+  - {fileID: 8758935694853837100}
 --- !u!1 &5385281185150853245
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +440,7 @@ GameObject:
   - component: {fileID: 829618578019266050}
   - component: {fileID: 2057287258849937181}
   - component: {fileID: 4039237680408690552}
+  - component: {fileID: 8444594726856117859}
   m_Layer: 0
   m_Name: Stick Center
   m_TagString: Untagged
@@ -499,6 +561,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 2.5, z: 5}
   m_Center: {x: 0.000000059604645, y: 0.5, z: -0.00000008940697}
+--- !u!114 &8444594726856117859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7921447976449116395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5430f410950743efa93011e4073bd114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stickType: 1
+  hanoiTower: {fileID: 8249093699677418769}
 --- !u!1 &8530357938343539031
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +623,7 @@ GameObject:
   - component: {fileID: 1386923789530094076}
   - component: {fileID: 2720330874565577665}
   - component: {fileID: 1398968777195174936}
+  - component: {fileID: 8758935694853837100}
   m_Layer: 0
   m_Name: Stick Right
   m_TagString: Untagged
@@ -667,3 +744,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 2.5, z: 5}
   m_Center: {x: 0.000000059604645, y: 0.5, z: -0.00000008940697}
+--- !u!114 &8758935694853837100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8919659110306711096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5430f410950743efa93011e4073bd114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stickType: 2
+  hanoiTower: {fileID: 8249093699677418769}

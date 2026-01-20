@@ -3,6 +3,11 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     [SerializeField] private Slot[] slots;
+
+    void Start()
+    {
+        
+    }
     
     public void GetItem(IItem item)
     {

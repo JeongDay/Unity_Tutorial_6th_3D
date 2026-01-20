@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class PoolManager : SingletonCore<PoolManager>
+public class PoolManager : MonoBehaviour
 {
     [Serializable]
     public class PoolData
@@ -17,10 +17,8 @@ public class PoolManager : SingletonCore<PoolManager>
     // 이름으로 Pool 검색
     private Dictionary<string, IObjectPool<GameObject>> poolDics = new Dictionary<string, IObjectPool<GameObject>>();
 
-    protected override void Awake()
+    void Awake()
     {
-        base.Awake();
-
         // Pool을 생성하고 Dictionary에 등록하는 기능
         foreach (var poolData in poolList)
         {

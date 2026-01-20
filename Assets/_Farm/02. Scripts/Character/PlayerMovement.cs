@@ -96,12 +96,12 @@ public class PlayerMovement : MonoBehaviour
     private void OnInventory(InputValue value)
     {
         if (value.isPressed)
-            UIManager.Instance.InventoryOnOff();
+            GameManager.Instance.Ui.InventoryOnOff();
     }
 
     private void OnEscape(InputValue value)
     {
         if (value.isPressed)
-            UIManager.Instance.AllPopUpClose();
+            GameManager.Instance.Ui.AllPopUpClose();
     }
 }

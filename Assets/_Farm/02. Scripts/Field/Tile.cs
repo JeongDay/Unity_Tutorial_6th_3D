@@ -17,7 +17,7 @@ public class Tile : MonoBehaviour
         if (isCreate)
             return;
 
-        cropObj = PoolManager.Instance.GetObject(cropPrefab.name);
+        cropObj = GameManager.Instance.Pool.GetObject(cropPrefab.name);
 
         cropObj.transform.SetParent(transform);
         cropObj.transform.localPosition = Vector3.zero;
@@ -44,7 +44,7 @@ public class Tile : MonoBehaviour
                 isCreate = false;
                 
                 string cropName = cropObj.name.Replace("(Clone)", "");
-                PoolManager.Instance.ReleaseObject(cropName, cropObj);
+                GameManager.Instance.Pool.ReleaseObject(cropName, cropObj);
 
                 StartCoroutine(HarvestRoutine());
             }
@@ -57,7 +57,7 @@ public class Tile : MonoBehaviour
 
         for (int i = 0; i < randomAmount; i++)
         {
-            GameObject fruitObj = PoolManager.Instance.GetObject(fruitPrefab.name);
+            GameObject fruitObj = GameManager.Instance.Pool.GetObject(fruitPrefab.name);
             
             fruitObj.transform.position = transform.position + Vector3.up * 0.5f;
             Rigidbody fruitRb = fruitObj.GetComponent<Rigidbody>();

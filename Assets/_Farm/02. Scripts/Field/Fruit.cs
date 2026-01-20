@@ -27,7 +27,7 @@ public class Fruit : MonoBehaviour, ITriggerEvent, IItem
 
     public void Get()
     {
-        PoolManager.Instance.ReleaseObject(ItemName, gameObject);
+        GameManager.Instance.Pool.ReleaseObject(ItemName, gameObject);
         Debug.Log($"{ItemName} 획득");
         
         Inven.GetItem(this);

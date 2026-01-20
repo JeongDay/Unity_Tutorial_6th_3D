@@ -118,7 +118,7 @@ public class Slot : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHandler
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 10f;
         Vector3 spawnPos = Camera.main.ScreenToWorldPoint(mousePos);
-        GameObject dropObj = PoolManager.Instance.GetObject(item.ItemName);
+        GameObject dropObj = GameManager.Instance.Pool.GetObject(item.ItemName);
         dropObj.transform.position = spawnPos + Vector3.up * 0.5f;
         SetItem(null);
         
