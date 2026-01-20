@@ -20,12 +20,15 @@ public class StudyLock : MonoBehaviour
 
     private void SubThread(string msg)
     {
-        Debug.Log($"{msg} 스레드 시작");
-        Thread.Sleep(500);
-        
-        Debug.Log($"{msg} 스레드 진행중");
-        Thread.Sleep(500);
-        
-        Debug.Log($"{msg} 스레드 종료");
+        lock (obj)
+        {
+            Debug.Log($"{msg} 쓰레드 시작");
+            Thread.Sleep(500);
+            
+            Debug.Log($"{msg} 쓰레드 진행중");
+            Thread.Sleep(500);
+            
+            Debug.Log($"{msg} 쓰레드 종료");
+        }
     }
 }
