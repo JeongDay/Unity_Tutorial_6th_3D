@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using Farm;
 using TMPro;
 using UnityEngine;
@@ -14,16 +15,17 @@ public class IntroManager : MonoBehaviour
 
     void Start()
     {
-        createButton.onClick.AddListener(() =>
-        {
-            // 회원가입 기능
-        });
+        createButton.onClick.AddListener(() => CreateUserData().Forget());
+        loginButton.onClick.AddListener(() => LoginUserData().Forget());
+    }
+
+    private async UniTaskVoid CreateUserData()
+    {
         
-        loginButton.onClick.AddListener(() =>
-        {
-            // 로그인 기능
-            DataManager.Instance.UserID = idInput.text;
-            SceneManager.LoadScene(1);
-        });
+    }
+    
+    private async UniTaskVoid LoginUserData()
+    {
+        
     }
 }
