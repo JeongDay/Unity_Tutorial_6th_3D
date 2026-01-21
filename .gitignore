@@ -13,10 +13,8 @@
 *.log
 /Assets/TerrainSampleAssets/
 /Assets/TerrainDemoScene_URP/
-*.json
-*.csv
-*.tsv
-*.xml
+
+/google-services.json
 
 # By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
 *.blend1
