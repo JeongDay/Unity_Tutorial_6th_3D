@@ -24,6 +24,8 @@ namespace Farm
             leftButton.onClick.AddListener(TurnLeft);
             rightButton.onClick.AddListener(TurnRight);
             selectButton.onClick.AddListener(Select);
+
+            Debug.Log($"사용자 아이디 : {DataManager.Instance.UserID} / 골드 : {DataManager.Instance.UserGold}");
         }
 
         private void TurnLeft() // 왼쪽으로 회전 설정
@@ -74,6 +76,7 @@ namespace Farm
         private void Select() // 현재 캐릭터를 선택하는 기능
         {
             DataManager.Instance.SelectCharacterIndex = characterIndex; // 현재 선택한 캐릭터 인덱스 저장
+            DataManager.Instance.SetUnitData("Unit" + characterIndex);
             StartCoroutine(SelectRoutine());
         }
 
